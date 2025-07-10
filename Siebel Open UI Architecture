@@ -21,3 +21,26 @@
                 Mind Map
 4) Manifest Files
 The Manifest determines which JavaScript files are downloaded to the client 
+
+
+Siebel Open UI – Request-to-Render Process Flow
+        Step 1:
+        The Presentation Model (PM) initiates the request and passes it to the Client Proxy.
+        
+        Step 2:
+        The Client Proxy forwards the request to the Siebel Server.
+        
+        Step 3:
+        The Siebel Server processes the request and sends the response (data and metadata) back to the Client Proxy.
+        
+        Step 4:
+        The Client Proxy reads the Manifest Files and downloads all required JavaScript and CSS resources.
+        
+        Step 5:
+        The Presentation Model applies business logic to the received result set (e.g., field behavior, state changes) and passes the processed data to the Physical Renderer (PR).
+        
+        Step 6:
+        The Physical Renderer uses the processed data to generate the final HTML structure, referencing necessary CSS files for styling.
+        
+        Step 7:
+        The final output is rendered and displayed on the browser for the user.
