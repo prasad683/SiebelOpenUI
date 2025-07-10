@@ -1,0 +1,77 @@
+1.	To Get Business Object Name:
+var PM = SiebelApp.S_App.GetActiveView().GetActiveApplet().GetPModel();
+PM.Get("GetBusComp").GetBusObj().GetName();
+2.	To Get Business Component Name:
+PM.Get("GetBusComp").GetName();
+3.	To Get list of field displayed in Business Component:
+PM.Get("GetBusComp").GetFieldMap();
+4.	To Get Business Component field value:
+PM.Get("GetBusComp").GetFieldValue("BC_FIELD_NAME");
+5.	To Get the current record BC Row Id value:
+PM.Get("GetBusComp").GetIdValue();
+6.	To Get a total number of rows displayed in the list applet:
+PM.Get("GetBusComp").GetNumRows();
+7.	To Get the current selected row from list applet:
+PM.Get("GetBusComp").GetCurRowNum(); 
+8.	To Get the current selected row from list applet:
+PM.Get("GetBusComp").GetSelection(); 
+9.	To Get the field name currently used for Sorting with ASC/DEC:
+PM.Get("GetBusComp").GetSortSpec();
+10.	To Get the Parent Business Component Name:
+PM.Get("GetBusComp").GetParentBusComp().GetName();
+11.	To Get the list of field displayed in Parent Business Component:
+PM.Get("GetBusComp").GetParentBusComp().GetFieldMap();
+12.	To Get the Parent Business Component field value:
+PM.Get("GetBusComp").GetParentBusComp().GetFieldValue("BC_FIELD_NAME");
+13.	To Get Siebel Application Name:
+SiebelApp.S_App.GetAppTitle()
+14.	To Get Siebel Application URL:
+SiebelApp.S_App.GetPageURL()
+15.	To Get/Set Profile Attribute:
+SiebelApp.S_App.GetProfileAttr("ProfileAttr_Name")
+SiebelApp.S_App.SetProfileAttr("ProfileAttr_Name","Value")
+16.	To Log off the Siebel Application:
+SiebelApp.S_App.LogOff()
+17.	To Get Presentation Model instance:
+var PM =SiebelApp.S_App.GetActiveView().GetActiveApplet().GetPModel()
+18.	To Execute current Applet Method:
+PM.ExecuteMethod("InvokeMethod","MethodName")
+19.	To Get the status of Method availability:
+PM.ExecuteMethod("CanInvokeMethod","MethodName")
+20.	To Check whether user can update the control value:
+PM.ExecuteMethod("CanUpdate","ControlName")
+21.	To Check whether Control has Drilldown:
+PM.ExecuteMethod("CanNavigate","ControlName")
+22.	To Get the List of control present in the current applet:
+PM.Get("GetControls")
+23.	To Check whether applet has valid BC:
+PM.Get("IsPure")
+24.	To Check whether applet is in Query Mode:
+PM.Get("IsInQueryMode")
+25.	To Get Active View Name:
+SiebelApp.S_App.GetActiveView().GetName()
+26.	To Get List Applet from Active View:
+SiebelApp.S_App.GetActiveView().GetAppletMap()
+27.	To Get Active Applet Name:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetName()
+28.	To Get Active Applet Mode:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetMode()
+29.	To Invoke an Method from Active Applet:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().InvokeMethod("METHOD_NAME")
+30.	To Get Active Business Object Name:
+SiebelApp.S_App.GetActiveBusObj().GetName()
+SiebelApp.S_App.GetActiveView().GetBusObj().GetName()
+31.	To Get Active Business Component Name:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetBusComp().GetName()
+32.	To Get Field Value by providing Business Component & Field Name:
+SiebelApp.S_App.GetActiveBusObj().GetBusCompByName('BC_NAME').GetFieldValue('FIELD_NAME')
+33.	To Check whether the record is unsaved in Active Applet:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetBusComp().IsCommitPending()
+34.	To Get Number Record from Active List Applet:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetPModel().GetRenderer().GetGrid().getGridParam("reccount")
+35.	To Hide/Show List Applet Control by it's Name:
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetPModel().GetRenderer().GetGrid().hideCol('LIST_CONTROL_NAME')
+SiebelApp.S_App.GetActiveView().GetActiveApplet().GetPModel().GetRenderer().GetGrid().showCol('LIST_CONTROL_NAME')
+36.	To Remove never ending busy icon:
+SiebelApp.S_App.uiStatus.Free()
+
