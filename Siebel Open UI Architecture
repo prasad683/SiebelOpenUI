@@ -1,0 +1,23 @@
+1) Client Proxy
+        Acts as the interface between the browser and the Siebel Server.
+        Retrieves both run-time data (actual data from the Siebel database displayed in views/applets) and metadata (e.g., field names, read-only flags, required flags).
+        Passes this information to the Presentation Model.
+
+2) Presentation Model (PM)
+        A JavaScript file that defines the business logic to apply to the metadata and run-time data received from the Client Proxy.
+        Responsible for handling client-side interactions, such as:
+        User navigating away from a control
+        User clicking a link or button
+        The Presentation Model is composed of:
+        Properties – Store the current state of user interactions.
+        Methods – Define how the application should respond to specific user actions.
+
+3) Physical Renderer (PR)
+        Determines how data is displayed to the user.
+        The same data set can be presented in different layouts such as:
+                List Applet
+                Carousel View
+                Calendar
+                Mind Map
+4) Manifest Files
+The Manifest determines which JavaScript files are downloaded to the client 
